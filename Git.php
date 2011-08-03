@@ -409,6 +409,15 @@ class GitRepo {
 		return $this->run("log -n 1 --pretty=format:%H"));
 	}
 
+	/**
+	 * Runs a `git submodule` call
+	 *
+	 * @access  public
+	 * @return  array
+	 */
+	public function submodule() {
+		return explode("\n", $this->run("submodule"));
+	}
 }
 
 /* End Of File */
