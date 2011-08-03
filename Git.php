@@ -406,7 +406,7 @@ class GitRepo {
 	 * @return  string
 	 */
 	public function log_recent_commit() {
-		return $this->run("log -n 1 --pretty=format:%H"));
+		return $this->run("log -n 1 --pretty=format:%H");
 	}
 
 	/**
@@ -427,7 +427,7 @@ class GitRepo {
 	 * @return  string
 	 */
 	public function get_config($config = "") {
-		return $this->run("config --get ".$config));
+		return $this->run("config --get ".$config);
 	}
 
 	/**
@@ -437,7 +437,7 @@ class GitRepo {
 	 * @return  string
 	 */
 	public function version() {
-		return $this->run("--version));
+		return $this->run("--version");
 	}
 }
 
