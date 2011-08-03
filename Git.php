@@ -429,6 +429,16 @@ class GitRepo {
 	public function get_config($config = "") {
 		return $this->run("config --get ".$config));
 	}
+
+	/**
+	 * Runs a `git --version` call
+	 *
+	 * @access  public
+	 * @return  string
+	 */
+	public function version() {
+		return $this->run("--version));
+	}
 }
 
 /* End Of File */
