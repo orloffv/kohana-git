@@ -399,6 +399,16 @@ class GitRepo {
 		return explode("\n", $this->run("ls-files"));
 	}
 
+	/**
+	 * Runs a `git log -n 1 --pretty=format:%H` call
+	 *
+	 * @access  public
+	 * @return  string
+	 */
+	public function log_recent_commit() {
+		return $this->run("log -n 1 --pretty=format:%H"));
+	}
+
 }
 
 /* End Of File */
