@@ -418,6 +418,17 @@ class GitRepo {
 	public function submodule() {
 		return explode("\n", $this->run("submodule"));
 	}
+
+	/**
+	 * Runs a `git config` call
+	 *
+	 * @access  public
+	 * @param		string config
+	 * @return  string
+	 */
+	public function get_config($config = "") {
+		return $this->run("config --get ".$config));
+	}
 }
 
 /* End Of File */
