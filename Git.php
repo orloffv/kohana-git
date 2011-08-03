@@ -384,9 +384,19 @@ class GitRepo {
 	 * @access  public
 	 * @param   string  branch name
 	 * @return  string
-	 */	
+	 */
 	public function checkout($branch) {
 		return $this->run("checkout $branch");
+	}
+
+	/**
+	 * Runs a `git ls-files` call
+	 *
+	 * @access  public
+	 * @return  array
+	 */
+	public function list_files() {
+		return explode("\n", $this->run("ls-files"));
 	}
 
 }
