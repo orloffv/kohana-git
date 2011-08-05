@@ -431,6 +431,16 @@ class GitRepo {
 	}
 
 	/**
+	 * Checks if a workspace is clean
+	 *
+	 * @access  public
+	 * @return  boolean
+	 */
+	public function is_clean_workspace() {
+		return (preg_match("#nothing to commit*.#",$this->run("status -uno | tail -n 1")));
+	}
+
+	/**
 	 * Runs a `git --version` call
 	 *
 	 * @access  public
