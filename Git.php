@@ -25,7 +25,7 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) die('Bad load order');
  *
  * @class  Git
  */
-class Git {
+class Git_Git {
 
 	/**
 	 * Create a new git repository
