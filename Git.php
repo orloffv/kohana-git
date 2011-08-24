@@ -405,6 +405,32 @@ class GitRepo {
 	}
 
 	/**
+	 * Runs a `git pull` call
+	 *
+	 * Accepts a name for the remote repo
+	 *
+	 * @access  public
+	 * @param   string  remote repo name
+	 * @return  string
+	 */
+	public function pull($repo = '') {
+		return $this->run("pull $repo -v");
+	}
+
+	/**
+	 * Runs a `git push` call
+	 *
+	 * Accepts a name for the remote repo
+	 *
+	 * @access  public
+	 * @param   string  remote repo name
+	 * @return  string
+	 */
+	public function push($repo = '') {
+		return $this->run("push $repo -v");
+	}
+
+	/**
 	 * Runs a `git ls-files` call
 	 *
 	 * @access  public
