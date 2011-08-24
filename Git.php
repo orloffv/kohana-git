@@ -247,6 +247,20 @@ class GitRepo {
 	}
 
 	/**
+	 * Runs a `git reset HEAD` call
+	 *
+	 * Accepts a list of files to unstage
+	 *
+	 * @access  public
+	 * @param   mixed   files to unstage
+	 * @return  string
+	 */	
+	public function unstage($files = "*") {
+		if (is_array($files)) $files = '"'.implode('" "', $files).'"';
+		return $this->run("reset HEAD $files");
+	}
+
+	/**
 	 * Runs a `git commit` call
 	 *
 	 * Accepts a commit message string
