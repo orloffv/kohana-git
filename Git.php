@@ -253,10 +253,11 @@ class GitRepo {
 	 *
 	 * @access  public
 	 * @param   string  commit message
+	 * @param   string  automatically stage files
 	 * @return  string
 	 */	
-	public function commit($message = "") {
-		return $this->run("commit -av -m \"$message\"");
+	public function commit($message = "", $all = true) {
+		return $this->run("commit".(($all) ? '-a ' : '')." -v -m \"$message\"");
 	}
 
 	/**
