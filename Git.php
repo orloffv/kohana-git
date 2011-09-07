@@ -271,7 +271,7 @@ class GitRepo {
 	 * @return  string
 	 */	
 	public function commit($message = "", $all = true) {
-		return $this->run("commit".(($all) ? '-a ' : '')." -v -m \"$message\"");
+		return $this->run("commit".(($all) ? ' -a ' : '')." -v -m \"$message\"");
 	}
 
 	/**
