@@ -375,6 +375,22 @@ class GitRepo {
 	}
 
 	/**
+	 * Runs a `git tag` call
+	 *
+	 * @access  public
+	 * @return  array
+	 */
+	public function list_tags() {
+		$tagArray = explode("\n", $this->run("tag"));
+		foreach($tagArray as $i => &$tag) {
+			$tag = trim($tag);
+			if ($tag == "")
+				unset($tagArray[$i]);
+		}
+		return $tagArray;
+	}
+
+	/**
 	 * Returns name of active branch
 	 *
 	 * @access  public
