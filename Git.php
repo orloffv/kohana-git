@@ -23,9 +23,9 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) die('Bad load order');
  * This class enables the creating, reading, and manipulation
  * of git repositories.
  *
- * @class  Git
+ * @class  GitCore
  */
-class Git {
+class GitCore {
 
 	/**
 	 * Create a new git repository

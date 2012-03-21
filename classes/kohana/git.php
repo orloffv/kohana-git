@@ -5,7 +5,7 @@ class Kohana_Git {
     private static $instance;
         
     /**
-     * @return  Git
+     * @return  GitRepo
      */
     public static function factory($path = '') {
         
@@ -13,11 +13,11 @@ class Kohana_Git {
         
         $path = is_null($path) ? $config->path : $path;
         
-        return new Git::open($path);
+        return GitCore::open($path);
     }
 
     /**
-     * @return  Git
+     * @return  GitRepo
      */
     public static function instance($path = null)  {
         // если объект уже создан вернем ссылку на него
