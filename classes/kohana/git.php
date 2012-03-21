@@ -7,7 +7,7 @@ class Kohana_Git {
     /**
      * @return  GitRepo
      */
-    public static function factory($path = '') {
+    public static function factory($path = null) {
         
         $config = Kohana::$config->load('git');
         
